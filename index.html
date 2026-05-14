@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duck Race Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <h1>🦆 Duck Race Arena</h1>
+        <div class="controls">
+          <button id="addDuck">Ördek Ekle</button>
+          <button id="shuffle">Karıştır</button>
+          <button id="startRace" class="primary">Yarışı Başlat</button>
+          <button id="reset">Sıfırla</button>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>Ördek Yönetimi</h2>
+        <div class="form-grid">
+          <input id="duckName" placeholder="Ördek adı" maxlength="20" />
+          <select id="duckColor">
+            <option value="#ffd84d">Sarı</option>
+            <option value="#7dd3fc">Mavi</option>
+            <option value="#f9a8d4">Pembe</option>
+            <option value="#86efac">Yeşil</option>
+            <option value="#c4b5fd">Mor</option>
+          </select>
+          <select id="duckOutfit">
+            <option value="none">Giysi: Yok</option>
+            <option value="cap">Şapka</option>
+            <option value="crown">Taç</option>
+            <option value="pirate">Korsan</option>
+            <option value="ninja">Ninja</option>
+          </select>
+          <button id="createCustom">Ekle</button>
+        </div>
+        <div id="duckList" class="duck-list"></div>
+      </section>
+
+      <section class="track-wrap">
+        <div class="finish-label">FINISH</div>
+        <div id="track" class="track"></div>
+      </section>
+
+      <section class="panel winners">
+        <h2>Sonuçlar</h2>
+        <ol id="resultList"></ol>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
